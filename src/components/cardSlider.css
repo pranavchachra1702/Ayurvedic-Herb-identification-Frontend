@@ -1,0 +1,82 @@
+/* CardSlider.css */
+.card-slider {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 40px auto;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  .card-slider-container {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  
+  .card-slider-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .information-section {
+    text-align: justify;
+    padding: 20px; /* Add padding to the information section */
+  }
+  
+  .information-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .information-section ol,
+  .information-section ul {
+    padding-left: 20px; /* Add left padding for lists */
+  }
+  
+  .information-section li {
+    margin-bottom: 10px;
+  }
+  
+  /* Add bullet styles for unordered lists */
+  .information-section ul {
+    list-style-type: disc; /* Use bullets for unordered lists */
+  }
+  
+  /* Add numbering styles for ordered lists */
+  .information-section ol {
+    list-style-type: decimal; /* Use numbering for ordered lists */
+  }
+  
+  .slider-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 1;
+    color: #333;
+    padding: 10px;
+    transition: color 0.3s, background-color 0.3s;
+    border-radius: 50%;
+  }
+  
+  .slider-nav.prev {
+    left: 5px;
+  }
+  
+  .slider-nav.next {
+    right: 5px;
+  }
+  
+  .slider-nav:hover {
+    color: #fff;
+    background-color: #527e52;
+  }
+  

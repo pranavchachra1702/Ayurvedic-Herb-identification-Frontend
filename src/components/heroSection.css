@@ -1,0 +1,93 @@
+video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1; 
+}
+
+.hero-container {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Cover the entire width of the container */
+    height: 100%; /* Cover the entire height of the container */
+    background: rgba(0, 0, 0, 0.4); /* Semi-transparent black layer */
+}
+
+.hero-container::after {
+    content: "";
+    background: var(--background-image) center center/cover no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensure the image is behind other content */
+    background-repeat: no-repeat; 
+}
+
+.hero-container > h1 {
+    color: #fff;
+    font-size: 80px;
+    margin-top: -100px;
+    position: relative; 
+    z-index: 1; 
+    text-align: center;
+}
+.hero-container > p {
+    margin-top: 8px;
+    color:#fff;
+    position: relative; 
+    z-index: 1; 
+    font-size: 36px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.hero-btns {
+    position: relative; 
+    z-index: 1; 
+    margin-top: 24px;
+}
+
+.hero-btns .btn {
+    margin: 4px;
+}
+
+@media screen and (max-width: 960px) {
+    .hero-container > h1 {
+        font-size: 70px;
+        margin-top: -150px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero-container > h1 {
+        font-size: 50px;
+        margin-top: -100px;
+    }
+
+    .hero-container > p {
+        font-size: 24px;
+    }
+
+    .btn-mobile{
+        display: block;
+        text-decoration: none;
+    }
+
+    .btn{
+        width: 100%
+    }
+}

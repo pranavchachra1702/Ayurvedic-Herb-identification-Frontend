@@ -1,0 +1,108 @@
+/* PoseDetail.css */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  .heading {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-weight: 700;
+  }
+  
+  .subheading {
+    color: #34495e;
+    font-size: 1.3em;
+    margin-bottom: 20px;
+    font-weight: 500;
+  }
+  
+  .image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 30px;
+  }
+  
+  .section-title {
+    color: #2980b9;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    font-weight: 600;
+    border-bottom: 2px solid #ecf0f1;
+    padding-bottom: 5px;
+  }
+  
+  .list {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 30px;
+  }
+  
+  .list-item {
+    background-color: #ecf0f1;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s ease;
+  }
+  
+  .list-item:hover {
+    background-color: #bdc3c7;
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    .container {
+      padding: 15px 20px;
+    }
+  
+    .heading {
+      font-size: 2em;
+    }
+  
+    .subheading {
+      font-size: 1.1em;
+    }
+  
+    .section-title {
+      font-size: 1.5em;
+    }
+  
+    .list-item {
+      padding: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .container {
+      padding: 10px 15px;
+    }
+  
+    .heading {
+      font-size: 1.8em;
+    }
+  
+    .subheading {
+      font-size: 1em;
+    }
+  
+    .section-title {
+      font-size: 1.3em;
+    }
+  
+    .list-item {
+      padding: 8px;
+    }
+  }
+  

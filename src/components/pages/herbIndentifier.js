@@ -3,8 +3,11 @@ import { useDropzone } from "react-dropzone";
 import "./herbIdentifier.css";
 import Footer from "../footer";
 import { Link } from "react-router-dom";
-import CardSlider from '../cardSlider';
+import CardSlider from "../cardSlider";
 import HerbCardData from "../herbCatalogue/herbCardData";
+import config from "../../config";
+
+const apiUrl = config.production.apiUrl;
 
 const HerbIdentifier = () => {
   const [image, setImage] = useState(null);
@@ -30,7 +33,7 @@ const HerbIdentifier = () => {
     formData.append("image", image);
 
     try {
-      const response = await fetch("http://127.0.0.1:5001/upload", {
+      const response = await fetch(`${apiUrl}/upload`, {
         method: "POST",
         body: formData,
       });
@@ -93,16 +96,23 @@ const HerbIdentifier = () => {
           <div className="error-message">
             <h3>Oops!</h3>
             <p>
-              It looks like the image you uploaded doesn't match any of our 30 recognized Ayurvedic herbs. Please try again with a different image.
+              It looks like the image you uploaded doesn't match any of our 30
+              recognized Ayurvedic herbs. Please try again with a different
+              image.
             </p>
             <h4>Tips for Better Results:</h4>
             <ul>
-              <li>Ensure the herb leaf is clearly visible and centered in the image.</li>
+              <li>
+                Ensure the herb leaf is clearly visible and centered in the
+                image.
+              </li>
               <li>Avoid backgrounds with too much clutter.</li>
               <li>Use good lighting to enhance visibility.</li>
             </ul>
             <p>
-              Explore More: Check out our <Link to="/herb-catalogue">Herb Catalogue Page</Link> to see examples of the 30 Ayurvedic herbs we recognize.
+              Explore More: Check out our{" "}
+              <Link to="/herb-catalogue">Herb Catalogue Page</Link> to see
+              examples of the 30 Ayurvedic herbs we recognize.
             </p>
           </div>
         )}
@@ -114,7 +124,6 @@ const HerbIdentifier = () => {
               <p className="subheading">{classLabel}</p>
               <h6 className="section-title">Summary:</h6>
               <p className="subheading">{summary}</p>
-          
             </div>
           </div>
         )}

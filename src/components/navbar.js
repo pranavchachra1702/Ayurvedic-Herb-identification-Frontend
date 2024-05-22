@@ -44,12 +44,12 @@ function Navbar() {
                         </li>
                         <li className='nav-item'>
                             <Link to='/herb-identifier' className='nav-links' onClick={closeMobileMenu}>
-                                Herb Indentifier
+                                Herb Identifier
                             </Link>
                         </li>
                         <li className='nav-item'>
                             <Link to='/vedic-recipies' className='nav-links' onClick={closeMobileMenu}>
-                                Vedic Recipies
+                                Vedic Recipes
                             </Link>
                         </li>
                         <li className='nav-item'>

@@ -20,7 +20,7 @@ function Card() {
               <CardItem
                 homePage="true"
                 src={require("../images/img_herb_catalogue.png")}
-                text="Take a look at our herb catlogue "
+                text="Take a look at our herb catalogue "
                 label="Herb Catalogue"
                 path="/herb-catalogue"
               />
@@ -36,8 +36,8 @@ function Card() {
               <CardItem
                 homePage="true"
                 src={require("../images/img4.jpg")}
-                text="Get access to ancient ayurvedic recipies that heal and rejuvinate you"
-                label="Recipies"
+                text="Get access to ancient ayurvedic recipes that heal and rejuvenate you"
+                label="Recipes"
                 path="/vedic-recipies"
               />
               <CardItem
